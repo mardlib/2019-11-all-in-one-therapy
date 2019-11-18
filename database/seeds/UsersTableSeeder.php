@@ -16,7 +16,7 @@ class UsersTableSeeder extends Seeder
         DB::table('users')->insert(
             ['name'=>'admin',
                 'password' => Hash::make('admin'),
-                'email' => 'admin@gmail.com',
+                'email' => 'admin',
                 'created_at' => Carbon::now()
             ]
         );
