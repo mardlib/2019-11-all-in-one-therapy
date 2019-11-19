@@ -5,6 +5,9 @@
 @section('main')
     <form method="post" action="{{ route('authenticate')  }}">
         @csrf
+        @if( $errors->any() )
+            <p class="alert alert-danger">Nice try</p>
+            @endif
         <p><input type="text" name="name" > </p>
         <p><input type="password" name="password"> </p>
         <p><button type="submit">Log In</button> </p>
