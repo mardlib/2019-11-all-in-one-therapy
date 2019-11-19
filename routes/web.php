@@ -19,6 +19,7 @@ Route::group(['middleware' => ['auth']], function() {
 Route::get('/backend', function () {
     return view('backend');
 });
+Route::get('/patients', 'PatientController@index');
 });
 
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
