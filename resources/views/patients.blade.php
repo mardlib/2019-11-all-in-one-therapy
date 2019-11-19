@@ -6,17 +6,17 @@
 
 @section('main')
     <table class="table">
-        <tr>
+        <tr class="text-left">
             <th> SVNR</th>
             <th> Name</th>
-            <th> Adress</th>
+            <th> Adresse</th>
             <th> PLZ</th>
             <th> Ort</th>
             <th> Land</th>
         </tr>
 
         @foreach($patients as $patient)
-            <tr>
+            <tr class="text-left">
                 <td>{{  $patient->svnr }}  </td>
                 <td>{{  $patient->lastname }} {{  $patient->firstname }} </td>
                 <td>{{  $patient->address }}</td>
@@ -26,4 +26,5 @@
             </tr>
         @endforeach
     </table>
+    <p>{{  $patients->links()  }}</p>
 @endsection
