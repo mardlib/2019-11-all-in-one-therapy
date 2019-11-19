@@ -2,6 +2,8 @@
 
 @section('title', 'login')
 
+
+
 @section('main')
     <form method="post" action="{{ route('authenticate')  }}">
         @csrf
