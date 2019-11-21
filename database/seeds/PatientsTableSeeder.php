@@ -6,8 +6,10 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use Kyslik\ColumnSortable\Sortable;
 class PatientsTableSeeder extends Seeder
 {
+    use Sortable;
     const MAX_PATIENTS=50;
     /**
      * Run the database seeds.
@@ -17,6 +19,7 @@ class PatientsTableSeeder extends Seeder
     public function run()
     {
         //
+
         for($i=0; $i<self::MAX_PATIENTS; ++$i) {
             $firstname = Arr::random(['Fritz', 'Franz', 'Karl', 'Josef', 'Agnes', 'Birgit', 'Sabine', 'Dorothea', 'Bianca', 'Alice', 'Sara', 'Fred', 'Otto', 'Sebastian', 'Michael', 'Alexander', 'Andreas', 'Silvia', 'Sibel', 'Amon', 'Birte', 'Ingrid', 'Klara', 'Larissa', 'Olivia']);
             $lastname = Arr::random(['Mueller', 'Maier', 'Brunner', 'Berger', 'Wolf', 'Putz', 'Schmied', 'Hofer', 'Wallner', 'Kurz', 'Lang', 'Zeit', 'Gans', 'Maus', 'Schatten', 'Gebauer', 'Konrad', 'Meyer', 'Meier', 'Mayer', 'Stein', 'Hafner', 'Herter', 'Bald', 'Sagmeister', 'Uhrmann', 'Becker', 'Toll', 'Loeffler', 'Lasser', 'Geber', 'Gerber', 'Hart', 'Blatt', 'Rosenberg', 'Baston', 'Pavlovsky', 'Ilicali', 'Wojcek', 'Baer', 'Denk', 'Haflinger', 'Sauber', 'Tann', 'Schaerdinger', 'Goestli', 'Zweig', 'Debbels', 'Horch', 'Mann', 'Huebsch', 'Dicke', 'Fern', 'Kalb', 'Wolf', 'Laut', 'Abzal']);
