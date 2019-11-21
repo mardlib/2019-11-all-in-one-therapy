@@ -40,4 +40,15 @@ class User extends Authenticatable
     public function documentations() {
         return $this->hasMany('App\Documentation');
     }
+
+    public function roles() {
+        return $this->belongsToMany('App\Role');
+    }
+
+    public function addRole(string $role){
+
+        $role = Role::where('name', $role)->first();
+
+        $this->roles()->save($role);
+    }
 }
